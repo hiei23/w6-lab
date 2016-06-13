@@ -32,7 +32,7 @@ $(document).ready(function()
         $(xmldata).find("pokemon").each( function(index, item)
         {
             var $item = $(item);
-            
+            console.log($item.attr("favourites") == true);
             // Make sure you only select the first three if you have more than three favourites!
             // You can make a "flag" variable that you manually add during the
             // $.each() loop and check to make sure that you only select three.

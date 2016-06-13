@@ -1,4 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<collection><!-- This is the one root element to rule them all ... -->
-    <!-- Start here. -->
+<collection>
+	<pokemon id="007" favourite="true">
+		<name>Squirtle</name>
+		<types>
+			<type>Water</type>
+		</types>
+		<abilities>
+			<ability>Torrent</ability>
+			<ability hidden="true">Rain Dish</ability>
+		</abilities>
+		<evolutions>
+			<evolution id="008" name="Wartortle" level="16"  />
+			<evolution id="009" name="Blastoise" level="36" />
+		</evolutions>
+	</pokemon>
+
+	<pokemon id="001" favourite="true">
+		<name>Bulbasaur</name>
+		<types>
+			<type>Grass</type>
+		</types>
+		<abilities>
+			<ability>Takle</ability>
+			<ability hidden="true">Rain Dish</ability>
+		</abilities>
+		<evolutions>
+			<evolution id="002" name="Ivysaour" level="16"  />
+			<evolution id="003" name="Venosaur" level="36" />
+		</evolutions>
+	</pokemon>
+
+	<pokemon id="025" favourite="true">
+		<name>Pikachu</name>
+		<types>
+			<type>Electric</type>
+		</types>
+		<abilities>
+			<ability>Electro Ball</ability>
+			<ability>Quick Attack</ability>
+		</abilities>
+		<evolutions>
+			<evolution id="026" name="Wartortle" stone="Thunderstone" />
+      </evolutions>
+	</pokemon>
+
+	<pokemon id="004" favourite="false">
+		<name>Charmander</name>
+		<types>
+			<type>Fire</type>
+		</types>
+		<abilities>
+			<ability>Bite</ability>
+			<ability>Flame Thrower</ability>
+			<ability hidden="true">Sunny Day</ability>
+		</abilities>
+		<evolutions>
+			<evolution id="005" name="Charmeleon" level="16"  />
+			<evolution id="006" name="Charizard" level="36" />
+		</evolutions>
+	</pokemon>
 </collection>
