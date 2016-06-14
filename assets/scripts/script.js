@@ -32,7 +32,7 @@ $(document).ready(function()
         $(xmldata).find("pokemon").each( function(index, item)
         {
             var $item = $(item);
-            console.log($item.attr("favourites") == true);
+            
             // Make sure you only select the first three if you have more than three favourites!
             // You can make a "flag" variable that you manually add during the
             // $.each() loop and check to make sure that you only select three.
@@ -40,21 +40,24 @@ $(document).ready(function()
             // To create elements in elements in jQuery, you should create elements in vars,
             // then append the children to the parents. For example:
             
-            var $article = $('<article/>', {
+            if ($item.attr("favourite") == "true" && totalFave < 3)
+            {
+                console.log($item.attr("favourite") == "true");
+                var $article = $('<article/>', {
                 id: 'pokemon-'+ $item.attr('id')
-            });
-            
-            var $name = $('<h2/>', {
-                text: $item.find('name').text()
-            });
-            
-            $article.append($name);
-            
-            // Add it to the section using $.appendTo('#mySelector');
-            
-            // Make sure to ++ the favourites flag variable
-            totalFave++;
-        
+                });
+                
+                var $name = $('<h2/>', {
+                    text: $item.find('name').text()
+                });
+                
+                $article.append($name);
+                
+                // Add it to the section using $.appendTo('#mySelector');
+                
+                // Make sure to ++ the favourites flag variable
+                totalFave++;
+            }
         });
     })
     .fail(function( jqXHR, textStatus )
